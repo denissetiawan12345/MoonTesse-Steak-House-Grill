@@ -64,7 +64,7 @@
     }
   </style>
 </head>
-<body>
+<body class="container-fluid">
     <!-- Loader -->
     <div id="splash-screen" class="d-flex justify-content-center align-items-center">
         <div class="" role="status" style="width: 35em; height: 35rem;">
@@ -291,7 +291,8 @@
         }
       }
 </style>
-  <div id="banner" class="banner full-screen-mode parallax">
+
+<div id="banner" class="banner full-screen-mode parallax container-fluid">
     <video autoplay muted loop id="bannerVideo" class="video-background">
         <source src="assets/head1.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -308,7 +309,7 @@
                         <h2>We Only Serve The Best Quality Of The Meat For The Best Customer Experience</h2>
                         <p>Reserve Your Table Now And Grab Your Happiness</p>
                         <div class="book-btn">
-                            <a href="#menu" class="table-btn hvr-underline-from-center">Reserve here</a>
+                            <a href="#reservation" class="table-btn hvr-underline-from-center">Reserve here</a>
                         </div>
                     </div>
                 </div>
@@ -316,118 +317,140 @@
         </div>
     </div>
 </div>
+
 <style>
+    .container-fluid {
+        overflow: hidden;
+    }
+    html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        height: auto;
+    }
+
     #banner {
         position: relative;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.3);
         justify-content: center;
         overflow: hidden;
     }
-    
+
     .video-background {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 100%;
         height: 100%;
+        width: 100%;
+        max-width: 100vw;
+        max-height: 100vh;
         object-fit: cover;
         transform: translate(-50%, -50%);
         z-index: -1;
         pointer-events: none;
+        overflow: hidden;
     }
-    
+
     .banner-static {
         text-align: center;
         z-index: 1;
     }
 
-.banner-text h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 3.5rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.banner-text h1 .typer {
-    color: #ff5757;
-}
-
-.banner-text h2 {
-    font-family: 'Oleo Script', cursive;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #ff5722;
-    margin-bottom: 30px;
-}
-
-.banner-text p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #f8f8ff;
-    margin-bottom: 40px;
-}
-
-.book-btn .table-btn {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 10px 30px;
-    background-color: #ff5722;
-    color: #ffffff;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.book-btn .table-btn:hover {
-    background-color: #ff5757;
-    transition: all 0.5s;
-    font-weight: 1000;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-
-@media (max-width: 768px) {
     .banner-text h1 {
+        font-family: 'Lobster', cursive;
+        font-size: 3.5rem;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .banner-text h1 .typer {
+        color: #ff5757;
+    }
+
+    .banner-text h2 {
+        font-family: 'Oleo Script', cursive;
         font-size: 2.5rem;
+        font-weight: 600;
+        color: #ff5722;
+        margin-bottom: 30px;
     }
 
-    .banner-text h2 {
+    .banner-text p {
+        font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;
+        font-weight: 600;
+        color: #f8f8ff;
+        margin-bottom: 40px;
     }
 
-    .banner-text p {
+    .book-btn .table-btn {
+        font-family: 'Poppins', sans-serif;
         font-size: 1rem;
+        font-weight: 600;
+        padding: 10px 30px;
+        background-color: #ff5722;
+        color: #ffffff;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
     }
 
-    .book-btn .table-btn {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .banner-text h1 {
-        font-size: 2rem;
-    }
-
-    .banner-text h2 {
+    .book-btn .table-btn:hover {
+        background-color: #ff5757;
+        transition: all 0.5s;
+        font-weight: 1000;
         font-size: 1.2rem;
+        text-decoration: none;
+    }
+    @media (max-width: 1568px) {
+        html, body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+
+        }
+    }
+    @media (max-width: 768px) {
+        .banner-text h1 {
+            font-size: 2.5rem;
+        }
+
+        .banner-text h2 {
+            font-size: 1.5rem;
+        }
+
+        .banner-text p {
+            font-size: 1rem;
+        }
+
+        .book-btn .table-btn {
+            font-size: 0.9rem;
+        }
     }
 
-    .banner-text p {
-        font-size: 0.9rem;
+    @media (max-width: 480px) {
+        .banner-text h1 {
+            font-size: 2rem;
+        }
+
+        .banner-text h2 {
+            font-size: 1.2rem;
+        }
+
+        .banner-text p {
+            font-size: 0.9rem;
+        }
+
+        .book-btn .table-btn {
+            font-size: 0.8rem;
+            padding: 8px 20px;
+        }
     }
 
-    .book-btn .table-btn {
-        font-size: 0.8rem;
-        padding: 8px 20px;
-    }
-}
+
 </style>
 <section id="about">
     <div class="container-xxl py-5 container-relative">
@@ -2113,7 +2136,7 @@
                         <div class="image-content mb-3">
                             <img src="assets/cs4.png" alt="Customer 4" class="img-fluid rounded-circle">
                         </div>
-                        <p class="review">Steaknya enak, tapi hidangannya bisa lebih baik. Secara keseluruhan pengalaman yang menyenangkan.</p>
+                        <p class="review">Steaknya enak, tapi hidangannya bisa lebih baik. Secara keseluruhan menyenangkan.</p>
                         <h3 class="author">Daniel Rahman</h3>
                         <p class="job">Desainer Grafis</p>
                         <p class="testi-rating">★★★☆☆</p>
@@ -2125,7 +2148,7 @@
                         <div class="image-content mb-3">
                             <img src="assets/cs5.png" alt="Customer 5" class="img-fluid rounded-circle">
                         </div>
-                        <p class="review">Tempat yang sempurna untuk makan malam romantis! Steaknya dimasak dengan sempurna dan suasananya sangat indah.</p>
+                        <p class="review">Tempat yang sempurna untuk makan malam romantis! Steaknya dimasak dengan sangat enak.</p>
                         <h3 class="author">Emily Johnson</h3>
                         <p class="job">Fotografer</p>
                         <p class="testi-rating">★★★★★</p>
